@@ -234,7 +234,7 @@ function processPayment(paymentData) {
   console.log(JSON.stringify(JSON.stringify(paymentData))); //JSON escape!
   //document.write(JSON.stringify(JSON.stringify(paymentData))); //JSON escape!
 
-  document.write('<table id="myTable" border="1"><tr><td style="width: 80%">' + JSON.stringify(JSON.stringify(paymentData)) + '</td></table>');
+  document.write('<table id="myTable" border="1"><tr><td style="width: 80%">' + JSON.stringify(JSON.stringify(paymentData)) + '</td></tr><td>Row 1, col 2 item</td><tr><td>Row 2, col 1 item</td><td>Row 2, col 2 item</td> </tr></table>');
 
 
 
