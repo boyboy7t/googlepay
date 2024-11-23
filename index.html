@@ -236,8 +236,11 @@ function processPayment(paymentData) {
 
   document.write('<table id="myTable" border="1"><tr><td style="width: 80%">' + JSON.stringify(JSON.stringify(paymentData)) + '</tr><tr><td>Row 2, col 1 item</td></tr></table>');
   
+  document.write('<input type="text" value="Hello World" id="myInput">');
+  const input = document.getElementById("myInput");
+  input.value = JSON.stringify(JSON.stringify(paymentData))
 
-  document.write('<input type="text" value=' + JSON.stringify(JSON.stringify(paymentData)) + 'id="myInput">');
+  
 
 
   // @todo pass payment token to your gateway to process payment
