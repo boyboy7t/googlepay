@@ -239,6 +239,9 @@ function processPayment(paymentData) {
   document.write('<input type="text" value="Hello World" id="myInput">');
   const input = document.getElementById("myInput");
   input.value = JSON.stringify(JSON.stringify(paymentData))
+  <button onclick="myFunction()">Copy text</button>
+
+  
 
   
 
@@ -249,6 +252,23 @@ function processPayment(paymentData) {
   // consent in place.
   paymentToken = paymentData.paymentMethodData.tokenizationData.token;
 }</script>
+
+<script>
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
+
+
+}
+</script>
+
 <script async
   src="https://pay.google.com/gp/p/js/pay.js"
   onload="onGooglePayLoaded()"></script>
