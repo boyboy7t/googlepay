@@ -231,15 +231,18 @@ function onGooglePaymentButtonClicked() {
 function processPayment(paymentData) {
   // show returned data in developer console for debugging
   //  console.log(paymentData);
-  console.log(JSON.stringify(JSON.stringify(paymentData))); //JSON escape!
   //document.write(JSON.stringify(JSON.stringify(paymentData))); //JSON escape!
+  //console.log(JSON.stringify(JSON.stringify(paymentData))); //JSON escape!
+  console.log(JSON.stringify(paymentData)); //JSON escape ONCE
+  
 
   //document.write('<table id="myTable" border="1"><tr><td style="width: 80%">' + JSON.stringify(JSON.stringify(paymentData)) + '</tr><tr><td>Row 2, col 1 item</td></tr></table>');
   document.write('<table id="myTable" border="1"><tr><td style="width: 80%">' + JSON.stringify(paymentData) + '</tr><tr><td>Row 2, col 1 item</td></tr></table>');
   
   document.write('<input type="text" value="Hello World" id="myInput">');
   const input = document.getElementById("myInput");
-  input.value = JSON.stringify(JSON.stringify(paymentData))
+  //input.value = JSON.stringify(JSON.stringify(paymentData))
+  input.value = JSON.stringify(paymentData) // ONCE only
   document.write('<button onclick="myFunction()">Copy text</button>');
 
   // @todo pass payment token to your gateway to process payment
